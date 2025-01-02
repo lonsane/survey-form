@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Career Survey Form</h1>
+        <p>Help us understand your career goals and preferences to provide best path!</p>
+    </header>
+    <form class="survey-form" id="careerSurvey">
+        <!-- Personal Background -->
+        <section>
+            <h2>Personal Information</h2>
+            <div class="form-group">
+                <label for="fullName">Full Name <span class="optional"></span></label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label for="ageDob">Age/Date of Birth</label>
+                <input type="date" id="ageDob" name="ageDob">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender <span class="optional"></span></label>
+                <select id="gender" name="gender">
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" placeholder="Enter your location">
+            </div>
+        </section>
+
+        <!-- Educational Background -->
+        <section>
+            <h2>Educational Background</h2>
+            <div class="form-group">
+                <label>Highest Qualification</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="qualification" value="highschool"> High School</label>
+                    <label><input type="radio" name="qualification" value="bachelors"> Bachelor’s Degree</label>
+                    <label><input type="radio" name="qualification" value="masters"> Master’s Degree</label>
+                    <label><input type="radio" name="qualification" value="phd"> PhD</label>
+                    <label><input type="radio" name="qualification" value="other"> Other: <input type="text" name="qualificationOther"></label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="specialization">Field of Study/Current Specialization</label>
+                <input type="text" id="specialization" name="specialization" placeholder="E.g., Computer Science, Engineering">
+            </div>
+            <div class="form-group">
+                <label for="certifications">Certifications</label>
+                <textarea id="certifications" name="certifications" placeholder="List any certifications"></textarea>
+            </div>
+        </section>
+
+        <!-- Career Interests and Goals -->
+        <section>
+            <h2>Career Interests and Goals</h2>
+            <div class="form-group">
+                <label>Career Interests (Select up to 3)</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="careerInterests" value="software"> Software Development</label>
+                    <label><input type="checkbox" name="careerInterests" value="dataScience"> Data Science</label>
+                    <label><input type="checkbox" name="careerInterests" value="marketing"> Marketing</label>
+                    <label><input type="checkbox" name="careerInterests" value="healthcare"> Healthcare</label>
+                    <label><input type="checkbox" name="careerInterests" value="graphicDesign"> Graphic Design</label>
+                    <label><input type="checkbox" name="careerInterests" value="finance"> Finance</label>
+                    <label><input type="checkbox" name="careerInterests" value="entrepreneurship"> Entrepreneurship</label>
+                    <label><input type="checkbox" name="careerInterests" value="other"> Other: <input type="text" name="careerInterestsOther"></label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="shortTermGoals">Short-Term Career Goals</label>
+                <textarea id="shortTermGoals" name="shortTermGoals" placeholder="E.g., Get a job, earn a promotion"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="longTermGoals">Long-Term Career Goals</label>
+                <textarea id="longTermGoals" name="longTermGoals" placeholder="E.g., Start your own business"></textarea>
+            </div>
+        </section>
+
+        <!-- Learning Preferences -->
+        <section>
+            <h2>Learning Preferences</h2>
+            <div class="form-group">
+                <label>Learning Style</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="learningStyle" value="online"> Online self-paced courses</label>
+                    <label><input type="radio" name="learningStyle" value="instructor"> Instructor-led online courses</label>
+                    <label><input type="radio" name="learningStyle" value="offline"> Offline classroom courses</label>
+                    <label><input type="radio" name="learningStyle" value="hybrid"> Hybrid</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Time Commitment</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="timeCommitment" value="less5"> Less than 5 hours</label>
+                    <label><input type="radio" name="timeCommitment" value="5to10"> 5-10 hours</label>
+                    <label><input type="radio" name="timeCommitment" value="10to20"> 10-20 hours</label>
+                    <label><input type="radio" name="timeCommitment" value="more20"> More than 20 hours</label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Questions -->
+        <section>
+            <h2>Additional Information</h2>
+            <div class="form-group">
+                <label for="skills">Current Skills</label>
+                <textarea id="skills" name="skills" placeholder="List 3 skills relevant to your desired career path"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Salary Expectation</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="salaryExpectation" value="less30"> Less than $30,000</label>
+                    <label><input type="radio" name="salaryExpectation" value="30to50"> $30,000 - $50,000</label>
+                    <label><input type="radio" name="salaryExpectation" value="50to80"> $50,000 - $80,000</label>
+                    <label><input type="radio" name="salaryExpectation" value="80to120"> $80,000 - $120,000</label>
+                    <label><input type="radio" name="salaryExpectation" value="more120"> More than $120,000</label>
+                </div>
+            </div>
+        </section>
+
+        <button type="button" class="btn" onclick="submitSurvey()">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

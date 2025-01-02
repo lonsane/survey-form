@@ -1,0 +1,143 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    /* background: linear-gradient(120deg, #e3f2fd, #bbdefb); */
+    background: #a8dadc;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.8rem;
+    color: #023047;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Form Styling */
+.survey-form {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.survey-form h2 {
+    font-size: 2rem;
+    color: #0a9396;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #0a9396;
+    padding-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+/* Input, Textarea, Select Styling */
+input[type="text"], input[type="date"], textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, textarea:focus, select:focus {
+    border-color: #1565c0;
+    box-shadow: 0 0 8px rgba(21, 101, 192, 0.2);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+/* Label Styling */
+label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    color: #444;
+}
+
+.optional {
+    font-weight: 400;
+    font-style: italic;
+    color: #999;
+}
+
+/* Radio and Checkbox Groups */
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.radio-group label, .checkbox-group label {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    background: #0d1b2a;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    color: #000000;
+    background: #0a9396;
+    transform: translateY(-2px);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .radio-group, .checkbox-group {
+        flex-direction: column;
+    }
+
+    .survey-form {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 2.4rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+}
